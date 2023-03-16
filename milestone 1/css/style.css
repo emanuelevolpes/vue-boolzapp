@@ -73,7 +73,7 @@ Sidebar
     margin-left: .3125rem;
 }
 
-.iconsheadersidebar > span > i {
+.iconsheadersidebar>span>i {
     margin: 0 .5rem;
     color: gray;
     font-size: 1.0625rem;
@@ -84,6 +84,25 @@ Sidebar
     display: flex;
     align-items: center;
     padding: 1.25rem;
+}
+
+.bellicon {
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bellicon > i {
+    color: #9fd7f9;
+    font-size: 1.25rem;
+}
+
+.bellsidebar .notifications a {
+    color: black;
 }
 
 .bellsidebar>* {
@@ -98,8 +117,12 @@ Sidebar
     justify-content: center;
 }
 
+.containersearchsidebar {
+    width: 100%;
+}
+
 .containersearchsidebar input[type=text] {
-    padding: .5rem 3.125rem .5rem 0;
+    padding: .5rem 9.25rem .5rem 0;
     border: none;
 }
 
