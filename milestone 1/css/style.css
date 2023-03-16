@@ -74,7 +74,7 @@ Sidebar
 
 .iconsheadersidebar>span>i {
     margin: 0 .5rem;
-    color: gray;
+    color: #b2b1b0;
     font-size: 1.0625rem;
 }
 
@@ -157,7 +157,7 @@ Sidebar
 
 .usernamestaticclock,
 .usernameinfo small {
-    color: lightgray;
+    color: #b2b1b0;
 }
 
 .usernameinfo {
@@ -177,12 +177,26 @@ Main
 }
 
 .mainheader {
-    height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
-    padding: .625rem;
+    padding: .3125rem .625rem;
+    border-left: .0625rem solid lightgray;
+}
+
+.contactmainheaderinfo {
+    margin-left: .625rem;
+}
+
+.contactmainheaderinfo small {
+    color: #b2b1b0;
+}
+
+.rightheadermain > span > i {
+    margin: 0 .5rem;
+    color: #b2b1b0;
+    font-size: 1.0625rem;
 }
 
 .leftheadermain,
