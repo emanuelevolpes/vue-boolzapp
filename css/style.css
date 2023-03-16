@@ -113,7 +113,6 @@ Main
 
 #maincontainer {
     width: 65%;
-    background-color: green;
 }
 
 .mainheader {
@@ -133,9 +132,12 @@ Main
 
 .maincenter {
     height: calc(100% - 7.5rem);
-    background-image: url(".../img/mine.jpg");
-    object-fit: cover;
 }
+
+/* .maincenter > div {
+    : url(".../img/mine.jpg");
+    object-fit: cover;
+} */
 
 .mainfooter {
     height: 3.75rem;
