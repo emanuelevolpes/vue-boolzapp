@@ -9,3 +9,22 @@ Reset
     padding: 0;
     box-sizing: border-box;
 }
+
+/*
+-------
+Common
+-------
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(
+        #429488 0%,
+        #429488 130px,
+        #dbdbd3 130px,
+        #dbdbd3 100%
+    );
+}
