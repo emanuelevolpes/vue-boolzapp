@@ -46,19 +46,52 @@ body {
 }
 
 #sidebar {
-    width: 30%;
+    width: 35%;
     background-color: pink;
 }
 
-#sidebarheader {
+.userinfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3.75rem;
     background-color: #eaeaea;
+    padding: .625rem;
+}
+
+.bellsidebar {
+    height: 4.375rem;
+    background-color: #9fd7f9;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.bellsidebar > * {
+    margin-right: 1.25rem;
+}
+
+.searchsidebar {
+    height: 2.5rem;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containersearchsidebar input[type=text] {
+  padding: .5rem 3.125rem .5rem 0;
+  border: none;
+}
+
+.containersearchsidebar button {
+  padding: .5rem 1.25rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 #main {
-    width: 70%;
+    width: 65%;
     background-color: green;
 }
