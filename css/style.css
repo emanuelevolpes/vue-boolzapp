@@ -12,6 +12,16 @@ Reset
 
 /*
 -------
+Common
+-------
+*/
+
+.d-flex {
+    display: flex;
+}
+
+/*
+-------
 Main
 -------
 */
@@ -38,6 +48,14 @@ body {
 #sidebar {
     width: 30%;
     background-color: pink;
+}
+
+#sidebarheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.75rem;
+    background-color: #eaeaea;
 }
 
 #main {
