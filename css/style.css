@@ -55,6 +55,7 @@ body {
 }
 
 .userinfo {
+    height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,14 +105,59 @@ body {
     flex-shrink: 0;
 }
 
-#maincontainer {
-    width: 65%;
-    background-color: green;
-}
-
 /*
 -------
 Main
 -------
 */
 
+#maincontainer {
+    width: 65%;
+    background-color: green;
+}
+
+.mainheader {
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: .625rem;
+}
+
+.leftheadermain,
+.rightheadermain {
+    display: flex;
+    align-items: center;
+}
+
+.maincenter {
+    height: calc(100% - 7.5rem);
+    background-image: url(".../img/mine.jpg");
+    object-fit: cover;
+}
+
+.mainfooter {
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: .625rem;
+}
+
+.emojifootermain,
+.recordfootermain {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainfooter .inputfootermain {
+    width: 80%;
+}
+
+.mainfooter .inputfootermain > input {
+    width: 100%;
+    padding: .625rem;
+}
