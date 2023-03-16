@@ -31,12 +31,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(
-        #429488 0%,
-        #429488 130px,
-        #dbdbd3 130px,
-        #dbdbd3 100%
-    );
+    background: linear-gradient(#429488 0%,
+            #429488 130px,
+            #dbdbd3 130px,
+            #dbdbd3 100%);
 }
 
 #container {
@@ -70,7 +68,7 @@ body {
     padding: 1.25rem;
 }
 
-.bellsidebar > * {
+.bellsidebar>* {
     margin-right: 1.25rem;
 }
 
@@ -83,25 +81,26 @@ body {
 }
 
 .containersearchsidebar input[type=text] {
-  padding: .5rem 3.125rem .5rem 0;
-  border: none;
+    padding: .5rem 3.125rem .5rem 0;
+    border: none;
 }
 
 .containersearchsidebar button {
-  padding: .5rem 1.25rem;
-  background-color: white;
-  border: none;
-  cursor: pointer;
+    padding: .5rem 1.25rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 
 #sidebarmain {
     height: 70%;
 }
 
-#sidebarmain > div{
+#sidebarmain>div {
     height: 100%;
     overflow: scroll;
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
 }
 
@@ -132,12 +131,9 @@ Main
 
 .maincenter {
     height: calc(100% - 7.5rem);
-}
-
-/* .maincenter > div {
-    : url(".../img/mine.jpg");
+    background-image: url("../img/mine.jpg");
     object-fit: cover;
-} */
+}
 
 .mainfooter {
     height: 3.75rem;
@@ -159,7 +155,7 @@ Main
     width: 80%;
 }
 
-.mainfooter .inputfootermain > input {
+.mainfooter .inputfootermain>input {
     width: 100%;
     padding: .625rem;
 }

@@ -48,7 +48,12 @@
             </header>
             <main id="sidebarmain">
                 <div id="app">
-                    
+                    <template v-for="user in contacts">
+                        <li>
+                            <img v-bind:src="user.avatar">
+                            <div>{{ user.name }}</div>
+                        </li>
+                    </template>
                 </div>
             </main>
         </section>
@@ -70,6 +75,7 @@
                 </div>
             </header>
             <main class="maincenter">
+                <div></div>
             </main>
             <footer class="mainfooter">
                 <div class="emojifootermain">:)</div>
