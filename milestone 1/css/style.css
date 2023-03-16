@@ -54,9 +54,9 @@ Sidebar
     background-color: white;
 }
 
-#sidebarheader {
+/* #sidebarheader {
     height: 30%;
-}
+} */
 
 .userinfo {
     display: flex;
@@ -121,19 +121,20 @@ Sidebar
 }
 
 .containersearchsidebar input[type=text] {
-    padding: .5rem 9.25rem .5rem 0;
+    padding: .5rem 0;
     border: none;
+    width: 80%;
 }
 
 .containersearchsidebar button {
-    padding: .5rem 1.25rem;
+    padding: .5rem 1.5625rem;
     background-color: white;
     border: none;
     cursor: pointer;
 }
 
 #sidebarmain {
-    height: 70%;
+    height: 33.125rem; /* problema altezza quando cambio la visualizzazione */
 }
 
 #sidebarmain>div {
@@ -209,6 +210,34 @@ Main
     height: calc(100% - 128px);
     background-image: url("../../img/mine.jpg");
     object-fit: cover;
+    padding: 3.125rem 4.375rem;
+}
+
+.maincenter #app {
+    display: flex;
+    flex-direction: column;
+}
+
+.sendmessages {
+    display: flex;
+    justify-content: flex-end;  
+}
+
+.sendmessages > p {
+    padding: .625rem;
+    background-color: #d4f8b9;
+    border-radius: .3125rem;
+}
+
+.recivedmessages {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.recivedmessages > p {
+    padding: .625rem;
+    background-color: white;
+    border-radius: .3125rem;
 }
 
 .mainfooter {
