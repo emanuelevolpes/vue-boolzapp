@@ -59,12 +59,11 @@ Sidebar
 }
 
 .userinfo {
-    height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
-    padding: .625rem;
+    padding: .3125rem .625rem;
 }
 
 .username {
@@ -83,7 +82,7 @@ Sidebar
     background-color: #9fd7f9;
     display: flex;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1.125rem 1.25rem;
 }
 
 .bellicon {
@@ -110,7 +109,7 @@ Sidebar
 }
 
 .searchsidebar {
-    padding: .3125rem;
+    padding: .625rem .3125rem;
     background-color: #fafafa;
     display: flex;
     align-items: center;
@@ -143,6 +142,28 @@ Sidebar
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+}
+
+#sidebarmain > div li {
+    padding: .5rem .625rem;
+    border-bottom: .0625rem solid lightgray;
+    justify-content: space-between;
+}
+
+#sidebarmain > div li:hover {
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
+.usernamestaticclock,
+.usernameinfo small {
+    color: lightgray;
+}
+
+.usernameinfo {
+    display: flex;
+    align-items: center;
+    margin-left: .625rem;
 }
 
 /*
