@@ -12,7 +12,7 @@ Reset
 
 /*
 -------
-Common
+Main
 -------
 */
 
@@ -27,4 +27,20 @@ body {
         #dbdbd3 130px,
         #dbdbd3 100%
     );
+}
+
+#container {
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+}
+
+#sidebar {
+    width: 30%;
+    background-color: pink;
+}
+
+#main {
+    width: 70%;
+    background-color: green;
 }
