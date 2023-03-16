@@ -21,9 +21,9 @@ Common
 }
 
 /*
--------
-Main
--------
+---------
+Sidebar
+---------
 */
 
 body {
@@ -47,20 +47,22 @@ body {
 
 #sidebar {
     width: 35%;
-    background-color: pink;
+    background-color: white;
+}
+
+#sidebarheader {
+    height: 30%;
 }
 
 .userinfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3.75rem;
     background-color: #eaeaea;
     padding: .625rem;
 }
 
 .bellsidebar {
-    height: 4.375rem;
     background-color: #9fd7f9;
     display: flex;
     align-items: center;
@@ -72,7 +74,7 @@ body {
 }
 
 .searchsidebar {
-    height: 2.5rem;
+    padding: .3125rem;
     background-color: #fafafa;
     display: flex;
     align-items: center;
@@ -91,7 +93,25 @@ body {
   cursor: pointer;
 }
 
-#main {
+#sidebarmain {
+    height: 70%;
+}
+
+#sidebarmain > div{
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-shrink: 0;
+}
+
+#maincontainer {
     width: 65%;
     background-color: green;
 }
+
+/*
+-------
+Main
+-------
+*/
+
