@@ -8,6 +8,7 @@ Reset
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 /*
@@ -44,19 +45,17 @@ Sidebar
 */
 
 #container {
-    width: 80vw;
-    height: 90vh;
+    width: 1600px;
+    height: 960px;
     display: flex;
 }
 
 #sidebar {
     width: 35%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
-
-/* #sidebarheader {
-    height: 30%;
-} */
 
 .userinfo {
     display: flex;
@@ -134,12 +133,15 @@ Sidebar
 }
 
 #sidebarmain {
-    height: 33.125rem; /* problema altezza quando cambio la visualizzazione */
+    height: 70%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 #sidebarmain>div {
-    height: 100%;
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -175,9 +177,12 @@ Main
 
 #maincontainer {
     width: 65%;
+    display: flex;
+    flex-direction: column;
 }
 
 .mainheader {
+    height: 3.9688rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -207,7 +212,8 @@ Main
 }
 
 .maincenter {
-    height: calc(100% - 128px);
+    flex-grow: 1;
+    /* height: calc(100% - 127px); */
     background-image: url("../../img/mine.jpg");
     object-fit: cover;
     padding: 3.125rem 4.375rem;
@@ -241,6 +247,7 @@ Main
 }
 
 .mainfooter {
+    height: 3.9688rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
