@@ -1,6 +1,6 @@
 # Boolzapp
 
-Versione Booleanizzata Di Whatzapp Web
+Versione Booleanizzata Di Whatsapp Web
 
 ## Milestone 1
 
