@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div id="app">
     <div id="container">
         <!-- sidebar -->
         <section id="sidebar">
@@ -62,22 +63,20 @@
             <!-- /header sidebar -->
             <!-- sidebar main -->
             <main id="sidebarmain">
-                <div id="app">
-                    <template v-for="user in contacts">
-                        <li class="d-flex">
-                            <div class="d-flex">
-                                <img class="userimgbackground" v-bind:src="user.avatar">
-                                <div class="usernameinfo">
-                                    <div>
-                                        <div>{{ user.name }}</div>
-                                        <div><small>Ultimo messaggio inviato</small></div>
-                                    </div>
+                <template v-for="user in contacts">
+                    <li class="d-flex">
+                        <div class="d-flex">
+                            <img class="userimgbackground" v-bind:src="user.avatar">
+                            <div class="usernameinfo">
+                                <div>
+                                    <div>{{ user.name }}</div>
+                                    <div><small>Ultimo messaggio inviato</small></div>
                                 </div>
                             </div>
-                            <div class="usernamestaticclock"><small>12:00</small></div>
-                        </li>
-                    </template>
-                </div>
+                        </div>
+                        <div class="usernamestaticclock"><small>12:00</small></div>
+                    </li>
+                </template>
             </main>
             <!-- /sidebar main -->
         </section>
@@ -105,23 +104,21 @@
             <!-- main center -->
             <main class="maincenter">
                 <!-- messages section -->
-                <div id="app">
-                    <div class="messageouter" v-for="user in contacts">
-                        <div class="messagesended">
-                            <p>{{ user.messages[0].message }}</p>
-                        </div>
-                        <div class="messagesended">
-                            <p>Ciefbewbwao</p>
-                        </div>
-                        <div class="messagesended">
-                            <p>Cibwetbebetberbtwebetbterbrbao</p>
-                        </div>
-                        <div class="messagesended">
-                            <p>Cibrtbrwbrtbrwbrtbao</p>
-                        </div>
-                        <div class="messagedrecived">
-                            <p>cwrtbrtbrbwrbome</p>
-                        </div>
+                <div class="messageouter" v-for="(user, index) in contacts">
+                    <div class="messagesended">
+                        <p>{{ user.messages[0].message }}</p>
+                    </div>
+                    <div class="messagesended">
+                        <p>Ciefbewbwao</p>
+                    </div>
+                    <div class="messagesended">
+                        <p>Cibwetbebetberbtwebetbterbrbao</p>
+                    </div>
+                    <div class="messagesended">
+                        <p>Cibrtbrwbrtbrwbrtbao</p>
+                    </div>
+                    <div class="messagedrecived">
+                        <p>cwrtbrtbrbwrbome</p>
                     </div>
                 </div>
                 <!-- /messages section -->
@@ -145,6 +142,7 @@
     <!-- my js -->
     <script src="js/main.js"></script>
     <!-- /my js -->
+    
 </body>
 
 </html>

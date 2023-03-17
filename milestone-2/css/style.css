@@ -209,6 +209,7 @@ Main
     background-image: url("../../img/mine.jpg");
     object-fit: cover;
     padding: 3.125rem 4.375rem;
+    overflow: auto;
 }
 
 .messageouter {
