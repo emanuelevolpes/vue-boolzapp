@@ -213,36 +213,39 @@ Main
 
 .maincenter {
     flex-grow: 1;
-    /* height: calc(100% - 127px); */
     background-image: url("../../img/mine.jpg");
     object-fit: cover;
     padding: 3.125rem 4.375rem;
 }
 
-.maincenter #app {
+.messageouter {
     display: flex;
     flex-direction: column;
 }
 
-.sendmessages {
+.messagesended {
+    flex: 1;
     display: flex;
-    justify-content: flex-end;  
+    flex-direction: row-reverse;
+    margin-bottom: .625rem;
 }
 
-.sendmessages > p {
-    padding: .625rem;
-    background-color: #d4f8b9;
+.messagesended > p {
+    background-color: #d5f9ba;
+    padding: .625rem 1.25rem .625rem .625rem;
     border-radius: .3125rem;
 }
 
-.recivedmessages {
+.messagedrecived {
+    flex: 1;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: .625rem;
 }
 
-.recivedmessages > p {
-    padding: .625rem;
-    background-color: white;
+.messagedrecived > p{
+    background-color: #ffffff;
+    padding: .625rem .625rem .625rem 1.25rem;
     border-radius: .3125rem;
 }
 
