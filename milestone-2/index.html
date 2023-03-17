@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzap</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <!-- /google font -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /font awesome -->
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- /my style -->
+</head>
+
+<body>
+    <div id="container">
+        <!-- sidebar -->
+        <section id="sidebar">
+            <!-- header sidebar -->
+            <header id="sidebarheader">
+                <!-- my personal info -->
+                <section class="userinfo">
+                    <div class="leftheadersidebar d-flex">
+                        <div class="userimage">
+                            <img class="userimgbackground" src="../img/avatar_2.jpg" alt="">
+                        </div>
+                        <div class="username">Emanuele</div>
+                    </div>
+                    <div class="iconsheadersidebar">
+                        <span><i class="fa-solid fa-circle-notch"></i></span>
+                        <span><i class="fa-solid fa-message"></i></span>
+                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </div>
+                </section>
+                <!-- /my personal info -->
+                <!-- bell sidebar -->
+                <section class="bellsidebar">
+                    <span class="bellicon"><i class="fa-solid fa-bell-slash"></i></span>
+                    <span class="notifications">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </span>
+                </section>
+                <!-- /bell sidebar -->
+                <!-- search sidebar -->
+                <section class="searchsidebar">
+                    <form class="containersearchsidebar">
+                        <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat" name="search">
+                    </form>
+                </section>
+                <!-- /search sidebar -->
+            </header>
+            <!-- /header sidebar -->
+            <!-- sidebar main -->
+            <main id="sidebarmain">
+                <div id="app">
+                    <template v-for="user in contacts">
+                        <li class="d-flex">
+                            <div class="d-flex">
+                                <img class="userimgbackground" v-bind:src="user.avatar">
+                                <div class="usernameinfo">
+                                    <div>
+                                        <div>{{ user.name }}</div>
+                                        <div><small>Ultimo messaggio inviato</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="usernamestaticclock"><small>12:00</small></div>
+                        </li>
+                    </template>
+                </div>
+            </main>
+            <!-- /sidebar main -->
+        </section>
+        <!-- /sidebar -->
+        <!-- main page -->
+        <section id="maincontainer">
+            <!-- header main -->
+            <header class="mainheader">
+                <div class="leftheadermain">
+                    <div class="contactimage">
+                        <img class="userimgbackground" src="../img/avatar_1.jpg">
+                    </div>
+                    <div class="contactmainheaderinfo">
+                        <div>Michele</div>
+                        <div><small>Ultimo accesso oggi alle 12:00</small></div>
+                    </div>
+                </div>
+                <div class="rightheadermain">
+                    <Span><i class="fa-solid fa-magnifying-glass"></i></Span>
+                    <Span><i class="fa-solid fa-paperclip"></i></Span>
+                    <Span><i class="fa-solid fa-ellipsis-vertical"></i></Span>
+                </div>
+            </header>
+            <!-- /header main -->
+            <!-- main center -->
+            <main class="maincenter">
+                <!-- messages section -->
+                <div id="app">
+                    <div class="messageouter" v-for="user in contacts">
+                        <div class="messagesended">
+                            <p>{{ user.messages[0].message }}</p>
+                        </div>
+                        <div class="messagesended">
+                            <p>Ciefbewbwao</p>
+                        </div>
+                        <div class="messagesended">
+                            <p>Cibwetbebetberbtwebetbterbrbao</p>
+                        </div>
+                        <div class="messagesended">
+                            <p>Cibrtbrwbrtbrwbrtbao</p>
+                        </div>
+                        <div class="messagedrecived">
+                            <p>cwrtbrtbrbwrbome</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /messages section -->
+            </main>
+            <!-- /main center -->
+            <!-- footer main -->
+            <footer class="mainfooter">
+                <div class="emojifootermain"><i class="fa-regular fa-face-smile"></i></div>
+                <div class="inputfootermain">
+                    <input type="text" placeholder="Scrivi un messaggio" name="search">
+                </div>
+                <div class="recordfootermain"><i class="fa-solid fa-microphone"></i></div>
+            </footer>
+            <!-- /footer main -->
+        </section>
+        <!-- /main page -->
+    </div>
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /vue js -->
+    <!-- my js -->
+    <script src="js/main.js"></script>
+    <!-- /my js -->
+</body>
+
+</html>

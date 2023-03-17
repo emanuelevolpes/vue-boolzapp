@@ -1,0 +1,276 @@
+/*
+-------
+Reset
+-------
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/*
+-------
+Common
+-------
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#429488 0%,
+            #429488 130px,
+            #dbdbd3 130px,
+            #dbdbd3 100%);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.userimgbackground {
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+}
+
+/*
+---------
+Sidebar
+---------
+*/
+
+#container {
+    width: 1600px;
+    height: 960px;
+    display: flex;
+}
+
+#sidebar {
+    width: 35%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.userinfo {
+    height: 4.6875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: .3125rem .625rem;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    margin-left: .3125rem;
+}
+
+.iconsheadersidebar>span>i {
+    margin: 0 .5rem;
+    color: #b2b1b0;
+    font-size: 1.0625rem;
+}
+
+.bellsidebar {
+    background-color: #9fd7f9;
+    display: flex;
+    align-items: center;
+    padding: 1.125rem 1.25rem;
+}
+
+.bellicon {
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bellicon > i {
+    color: #9fd7f9;
+    font-size: 1.25rem;
+}
+
+.bellsidebar .notifications a {
+    color: black;
+}
+
+.bellsidebar>* {
+    margin-right: 1.25rem;
+}
+
+.searchsidebar {
+    padding: .625rem .625rem;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containersearchsidebar {
+    width: 100%;
+}
+
+.containersearchsidebar input[type=text] {
+    padding: .5rem .3125rem;
+    border: none;
+    width: 100%;
+}
+
+#sidebarmain {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#sidebarmain>div {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+#sidebarmain > div li {
+    padding: .5rem .625rem;
+    border-bottom: .0625rem solid lightgray;
+    justify-content: space-between;
+}
+
+#sidebarmain > div li:hover {
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
+.usernamestaticclock,
+.usernameinfo small {
+    color: #b2b1b0;
+}
+
+.usernameinfo {
+    display: flex;
+    align-items: center;
+    margin-left: .625rem;
+}
+
+/*
+-------
+Main
+-------
+*/
+
+#maincontainer {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainheader {
+    height: 4.6875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: .3125rem .625rem;
+    border-left: .0625rem solid lightgray;
+}
+
+.contactmainheaderinfo {
+    margin-left: .625rem;
+}
+
+.contactmainheaderinfo small {
+    color: #b2b1b0;
+}
+
+.rightheadermain > span > i {
+    margin: 0 .5rem;
+    color: #b2b1b0;
+    font-size: 1.0625rem;
+}
+
+.leftheadermain,
+.rightheadermain {
+    display: flex;
+    align-items: center;
+}
+
+.maincenter {
+    flex-grow: 1;
+    background-image: url("../../img/mine.jpg");
+    object-fit: cover;
+    padding: 3.125rem 4.375rem;
+}
+
+.messageouter {
+    display: flex;
+    flex-direction: column;
+}
+
+.messagesended {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: .625rem;
+}
+
+.messagesended > p {
+    background-color: #d5f9ba;
+    padding: .625rem 1.25rem .625rem .625rem;
+    border-radius: .3125rem;
+}
+
+.messagedrecived {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .625rem;
+}
+
+.messagedrecived > p{
+    background-color: #ffffff;
+    padding: .625rem .625rem .625rem 1.25rem;
+    border-radius: .3125rem;
+}
+
+.mainfooter {
+    height: 4.6875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: .625rem 0;
+}
+
+.emojifootermain,
+.recordfootermain {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.emojifootermain > i,
+.recordfootermain > i {
+    color: gray;
+    font-size: 1.25rem;
+}
+
+.mainfooter .inputfootermain {
+    width: 80%;
+}
+
+.mainfooter .inputfootermain>input {
+    width: 100%;
+    padding: .8125rem .625rem;
+    border: none;
+    border-radius: .3125rem;
+}
