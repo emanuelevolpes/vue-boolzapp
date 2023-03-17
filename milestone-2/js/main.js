@@ -245,5 +245,10 @@ createApp({
             ]
 
         }
+    },
+    methods: {
+        selectedChat(index, event) {
+            this.activeChat = index;
+        }
     }
 }).mount('#app')

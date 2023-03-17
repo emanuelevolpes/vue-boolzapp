@@ -64,7 +64,7 @@
                 <!-- sidebar main -->
                 <main id="sidebarmain">
                     <template v-for="(user, index) in contacts">
-                        <li class="d-flex">
+                        <li class="d-flex" @click="selectedChat(index, $event)">
                             <div class="d-flex">
                                 <img class="userimgbackground" v-bind:src="user.avatar">
                                 <div class="usernameinfo">
@@ -127,6 +127,7 @@
             </section>
             <!-- /main page -->
         </div>
+    </div>
         <!-- vue js -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- /vue js -->
