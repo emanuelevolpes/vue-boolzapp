@@ -58,6 +58,7 @@ Sidebar
 }
 
 .userinfo {
+    height: 4.6875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +109,7 @@ Sidebar
 }
 
 .searchsidebar {
-    padding: .625rem .3125rem;
+    padding: .625rem .625rem;
     background-color: #fafafa;
     display: flex;
     align-items: center;
@@ -120,20 +121,12 @@ Sidebar
 }
 
 .containersearchsidebar input[type=text] {
-    padding: .5rem 0;
+    padding: .5rem .3125rem;
     border: none;
-    width: 80%;
-}
-
-.containersearchsidebar button {
-    padding: .5rem 1.5625rem;
-    background-color: white;
-    border: none;
-    cursor: pointer;
+    width: 100%;
 }
 
 #sidebarmain {
-    height: 70%;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -182,7 +175,7 @@ Main
 }
 
 .mainheader {
-    height: 3.9688rem;
+    height: 4.6875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,7 +243,7 @@ Main
 }
 
 .mainfooter {
-    height: 3.9688rem;
+    height: 4.6875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
