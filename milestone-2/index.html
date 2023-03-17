@@ -104,23 +104,21 @@
             <!-- main center -->
             <main class="maincenter">
                 <!-- messages section -->
-                <div class="messageouter" v-for="(user, index) in contacts">
-                    <div class="messagesended">
-                        <p>{{ user.messages[0].message }}</p>
+                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
+                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
+                <!-- <div class="messageouter" v-for="user in contacts">
+                    <div class="messagesended" v-for="message in user.messages">
+                        <p v-if="message.status === 'sent'">{{ message.message }}</p>
                     </div>
-                    <div class="messagesended">
-                        <p>Ciefbewbwao</p>
+                    <div class="messagedrecived" v-for="message in user.messages">
+                        <p v-if="message.status === 'received'">{{ message.message }}</p>
                     </div>
-                    <div class="messagesended">
-                        <p>Cibwetbebetberbtwebetbterbrbao</p>
-                    </div>
-                    <div class="messagesended">
-                        <p>Cibrtbrwbrtbrwbrtbao</p>
-                    </div>
-                    <div class="messagedrecived">
-                        <p>cwrtbrtbrbwrbome</p>
-                    </div>
-                </div>
+                </div> -->
                 <!-- /messages section -->
             </main>
             <!-- /main center -->
