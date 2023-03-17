@@ -104,21 +104,12 @@
             <!-- main center -->
             <main class="maincenter">
                 <!-- messages section -->
-                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived">Messaggio<span class="timemessage">12.00</span></p>
-                    <p class="messagerecived messagesent">Messaggio<span class="timemessage">12.00</span></p>
-                <!-- <div class="messageouter" v-for="user in contacts">
-                    <div class="messagesended" v-for="message in user.messages">
-                        <p v-if="message.status === 'sent'">{{ message.message }}</p>
+                <div class="containermessages" v-for="user in contacts">
+                    <div class="datamessages" v-for="messages in user.messages">
+                    <p v-if="messages.status === 'received'" class="messagerecived">{{ messages.message }}<span class="timemessage">12.00</span></p>
+                    <p v-else-if="messages.status === 'sent'" class="messagerecived messagesent">{{ messages.message }}<span class="timemessage">12.00</span></p>
                     </div>
-                    <div class="messagedrecived" v-for="message in user.messages">
-                        <p v-if="message.status === 'received'">{{ message.message }}</p>
-                    </div>
-                </div> -->
+                </div>
                 <!-- /messages section -->
             </main>
             <!-- /main center -->
