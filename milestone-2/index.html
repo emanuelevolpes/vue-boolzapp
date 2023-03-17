@@ -22,116 +22,118 @@
 </head>
 
 <body>
-<div id="app">
-    <div id="container">
-        <!-- sidebar -->
-        <section id="sidebar">
-            <!-- header sidebar -->
-            <header id="sidebarheader">
-                <!-- my personal info -->
-                <section class="userinfo">
-                    <div class="leftheadersidebar d-flex">
-                        <div class="userimage">
-                            <img class="userimgbackground" src="../img/avatar_2.jpg" alt="">
+    <div id="app">
+        <div id="container">
+            <!-- sidebar -->
+            <section id="sidebar">
+                <!-- header sidebar -->
+                <header id="sidebarheader">
+                    <!-- my personal info -->
+                    <section class="userinfo">
+                        <div class="leftheadersidebar d-flex">
+                            <div class="userimage">
+                                <img class="userimgbackground" src="../img/avatar_2.jpg" alt="">
+                            </div>
+                            <div class="username">Emanuele</div>
                         </div>
-                        <div class="username">Emanuele</div>
-                    </div>
-                    <div class="iconsheadersidebar">
-                        <span><i class="fa-solid fa-circle-notch"></i></span>
-                        <span><i class="fa-solid fa-message"></i></span>
-                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                    </div>
-                </section>
-                <!-- /my personal info -->
-                <!-- bell sidebar -->
-                <section class="bellsidebar">
-                    <span class="bellicon"><i class="fa-solid fa-bell-slash"></i></span>
-                    <span class="notifications">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
-                    </span>
-                </section>
-                <!-- /bell sidebar -->
-                <!-- search sidebar -->
-                <section class="searchsidebar">
-                    <form class="containersearchsidebar">
-                        <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat" name="search">
-                    </form>
-                </section>
-                <!-- /search sidebar -->
-            </header>
-            <!-- /header sidebar -->
-            <!-- sidebar main -->
-            <main id="sidebarmain">
-                <template v-for="user in contacts">
-                    <li class="d-flex">
-                        <div class="d-flex">
-                            <img class="userimgbackground" v-bind:src="user.avatar">
-                            <div class="usernameinfo">
-                                <div>
-                                    <div>{{ user.name }}</div>
-                                    <div><small>Ultimo messaggio inviato</small></div>
+                        <div class="iconsheadersidebar">
+                            <span><i class="fa-solid fa-circle-notch"></i></span>
+                            <span><i class="fa-solid fa-message"></i></span>
+                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>
+                    </section>
+                    <!-- /my personal info -->
+                    <!-- bell sidebar -->
+                    <section class="bellsidebar">
+                        <span class="bellicon"><i class="fa-solid fa-bell-slash"></i></span>
+                        <span class="notifications">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </span>
+                    </section>
+                    <!-- /bell sidebar -->
+                    <!-- search sidebar -->
+                    <section class="searchsidebar">
+                        <form class="containersearchsidebar">
+                            <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat" name="search">
+                        </form>
+                    </section>
+                    <!-- /search sidebar -->
+                </header>
+                <!-- /header sidebar -->
+                <!-- sidebar main -->
+                <main id="sidebarmain">
+                    <template v-for="(user, index) in contacts">
+                        <li class="d-flex">
+                            <div class="d-flex">
+                                <img class="userimgbackground" v-bind:src="user.avatar">
+                                <div class="usernameinfo">
+                                    <div>
+                                        <div>{{ user.name }}</div>
+                                        <div><small>Ultimo messaggio inviato</small></div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="usernamestaticclock"><small>12:00</small></div>
+                        </li>
+                    </template>
+                </main>
+                <!-- /sidebar main -->
+            </section>
+            <!-- /sidebar -->
+            <!-- main page -->
+            <section id="maincontainer">
+                <!-- header main -->
+                <header class="mainheader">
+                    <div class="leftheadermain">
+                        <div class="contactimage">
+                            <img class="userimgbackground" :src="contacts[activeChat].avatar">
                         </div>
-                        <div class="usernamestaticclock"><small>12:00</small></div>
-                    </li>
-                </template>
-            </main>
-            <!-- /sidebar main -->
-        </section>
-        <!-- /sidebar -->
-        <!-- main page -->
-        <section id="maincontainer">
-            <!-- header main -->
-            <header class="mainheader">
-                <div class="leftheadermain">
-                    <div class="contactimage">
-                        <img class="userimgbackground" src="../img/avatar_1.jpg">
+                        <div class="contactmainheaderinfo">
+                            <div>{{contacts[activeChat].name}}</div>
+                            <div><small>Ultimo accesso oggi alle 12:00</small></div>
+                        </div>
                     </div>
-                    <div class="contactmainheaderinfo">
-                        <div>Michele</div>
-                        <div><small>Ultimo accesso oggi alle 12:00</small></div>
+                    <div class="rightheadermain">
+                        <Span><i class="fa-solid fa-magnifying-glass"></i></Span>
+                        <Span><i class="fa-solid fa-paperclip"></i></Span>
+                        <Span><i class="fa-solid fa-ellipsis-vertical"></i></Span>
                     </div>
-                </div>
-                <div class="rightheadermain">
-                    <Span><i class="fa-solid fa-magnifying-glass"></i></Span>
-                    <Span><i class="fa-solid fa-paperclip"></i></Span>
-                    <Span><i class="fa-solid fa-ellipsis-vertical"></i></Span>
-                </div>
-            </header>
-            <!-- /header main -->
-            <!-- main center -->
-            <main class="maincenter">
-                <!-- messages section -->
-                <div class="containermessages" v-for="user in contacts">
-                    <div class="datamessages" v-for="messages in user.messages">
-                    <p v-if="messages.status === 'received'" class="messagerecived">{{ messages.message }}<span class="timemessage">12.00</span></p>
-                    <p v-else-if="messages.status === 'sent'" class="messagerecived messagesent">{{ messages.message }}<span class="timemessage">12.00</span></p>
+                </header>
+                <!-- /header main -->
+                <!-- main center -->
+                <main class="maincenter">
+                    <!-- messages section -->
+                    <div class="containermessages">
+                        <div class="datamessages" v-for="messages in contacts[activeChat].messages">
+                            <p v-if="messages.status === 'received'" class="messagerecived">{{ messages.message }}<span
+                                    class="timemessage">12.00</span></p>
+                            <p v-else-if="messages.status === 'sent'" class="messagerecived messagesent">{{
+                                messages.message }}<span class="timemessage">12.00</span></p>
+                        </div>
                     </div>
-                </div>
-                <!-- /messages section -->
-            </main>
-            <!-- /main center -->
-            <!-- footer main -->
-            <footer class="mainfooter">
-                <div class="emojifootermain"><i class="fa-regular fa-face-smile"></i></div>
-                <div class="inputfootermain">
-                    <input type="text" placeholder="Scrivi un messaggio" name="search">
-                </div>
-                <div class="recordfootermain"><i class="fa-solid fa-microphone"></i></div>
-            </footer>
-            <!-- /footer main -->
-        </section>
-        <!-- /main page -->
-    </div>
-    <!-- vue js -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- /vue js -->
-    <!-- my js -->
-    <script src="js/main.js"></script>
-    <!-- /my js -->
-    
+                    <!-- /messages section -->
+                </main>
+                <!-- /main center -->
+                <!-- footer main -->
+                <footer class="mainfooter">
+                    <div class="emojifootermain"><i class="fa-regular fa-face-smile"></i></div>
+                    <div class="inputfootermain">
+                        <input type="text" placeholder="Scrivi un messaggio" name="search">
+                    </div>
+                    <div class="recordfootermain"><i class="fa-solid fa-microphone"></i></div>
+                </footer>
+                <!-- /footer main -->
+            </section>
+            <!-- /main page -->
+        </div>
+        <!-- vue js -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- /vue js -->
+        <!-- my js -->
+        <script src="js/main.js"></script>
+        <!-- /my js -->
+
 </body>
 
 </html>
