@@ -12,6 +12,10 @@ Versione Booleanizzata Di WhatsApp Web
 
 - Al click su uno dei contatti si aprirà la chat e le info dello stesso
 
+## Milestone 3
+
+- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde;
+- Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 ## Author
 

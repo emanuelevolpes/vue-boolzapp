@@ -1,17 +1,12 @@
 'use strict';
 
-/*
-Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-*/
-
 const { createApp } = Vue;
 
 createApp({
     data() {
         return {
             userInput: '',
+            autoReply: '',
             activeChat: 0,
             contacts: [
                 {
@@ -260,7 +255,19 @@ createApp({
                 };
                 this.contacts[activeChat].messages.push(newSentMessage),
                 this.userInput = '';
-            }
+                setTimeout (() => {
+                    this.contactAutoReply(activeChat)
+                }, '1000');
+            };
+        },
+        contactAutoReply(activeChat) {
+                const autoReply = {
+                date: '10/01/2020 15:51:00',
+                message: 'ok',
+                status: 'received'
+            };
+            this.contacts[activeChat].messages.push(autoReply);
+            this.userInput = '';
         }
     }
 }).mount('#app')
