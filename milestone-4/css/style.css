@@ -207,7 +207,7 @@ Main
 .maincenter {
     background-image: url("../../img/mine.jpg");
     background-position: center;
-    height: calc(100vh - 150px);
+    height: calc(100% - 150px);
     padding: 1.25rem 5rem;
     overflow-y: scroll;
 }
