@@ -38,6 +38,10 @@ body {
     border-radius: 50%;
 }
 
+i:hover {
+    cursor: pointer;
+}
+
 /*
 ---------
 Sidebar
@@ -123,7 +127,16 @@ Sidebar
 .containersearchsidebar input[type=text] {
     padding: .5rem .3125rem;
     border: none;
-    width: 100%;
+    width: 80%;
+}
+
+.containersearchsidebar > i {
+    width: 20%;
+    background-color: white;
+    padding: .5rem;
+    text-align: center;
+    border-right: .0625rem solid #b2b1b0;
+    color: #b2b1b0;
 }
 
 #sidebarmain {

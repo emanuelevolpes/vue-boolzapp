@@ -55,7 +55,8 @@
                     <!-- search sidebar -->
                     <section class="searchsidebar">
                         <form class="containersearchsidebar">
-                            <input v-model="searchKey" type="text" placeholder="&#128269      Cerca o inizia una nuova chat" name="search">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <input v-model="searchKey" type="text" placeholder="   Cerca o inizia una nuova chat" name="search">
                         </form>
                     </section>
                     <!-- /search sidebar -->
@@ -107,9 +108,9 @@
                     <div class="containermessages">
                         <div class="datamessages" v-for="messages in contacts[activeChat].messages">
                             <p v-if="messages.status === 'received'" class="messagerecived">{{ messages.message }}<span
-                                    class="timemessage">12.00</span></p>
+                                    class="timemessage">{{ messages.date }}</span></p>
                             <p v-else-if="messages.status === 'sent'" class="messagerecived messagesent">{{
-                                messages.message }}<span class="timemessage">12.00</span></p>
+                                messages.message }}<span class="timemessage">{{ messages.date }}</span></p>
                         </div>
                     </div>
                     <!-- /messages section -->
